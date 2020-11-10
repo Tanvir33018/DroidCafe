@@ -49,10 +49,22 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_order) {
-            return true;
+        switch(id){
+            case R.id.action_order:
+                displayToast(getString(R.string.action_order_message));
+                break;
+            case R.id.action_contact:
+                displayToast(getString(R.string.action_contact_message));
+                break;
+            case R.id.action_favorities:
+                displayToast(getString(R.string.action_favorites_message));
+                break;
+            case R.id.action_status:
+                displayToast(getString(R.string.action_status_message));
+                break;
+            default:
+                break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
